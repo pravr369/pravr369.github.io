@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Professional portfolio of Praveen Ranganath - Co-Founder, Director, and Data Scientist specializing in Physics, Optics, and Machine Intelligence." />
+    <meta name="keywords" content="Praveen Ranganath, Data Scientist, Turing, Chakradhari, Physics, Optics, Machine Learning, Resume, CV" />
+    <meta name="author" content="Praveen Ranganath" />
+    <title>Praveen Ranganath | Co-Founder and Data Scientist</title>
+
+    <!-- Open Graph for social sharing -->
+    <meta property="og:title" content="Praveen Ranganath | Co-Founder and Data Scientist" />
+    <meta property="og:description" content="Co-Founder at Chakradhari Computational Technologies and Consulting Sr. Engineer at Turing. Expert in Physics, Optics, and Data Science." />
+    <meta property="og:type" content="profile" />
+
+    <!-- JSON-LD Schema for AI and search crawlers -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Praveen Ranganath",
+      "jobTitle": ["Co-Founder and Director", "Consulting Senior Engineer", "Data Scientist"],
+      "worksFor": [
+        { "@type": "Organization", "name": "Chakradhari Computational Technologies Pvt. Ltd." },
+        { "@type": "Organization", "name": "Turing" }
+      ],
+      "alumniOf": [
+        { "@type": "CollegeOrUniversity", "name": "Alabama A&M University" },
+        { "@type": "CollegeOrUniversity", "name": "University of Alabama, Huntsville" },
+        { "@type": "CollegeOrUniversity", "name": "BMS Institute of Technology" }
+      ],
+      "knowsAbout": ["Physics", "Optics", "Data Science", "Machine Learning", "Electromagnetics", "Photonics", "Radar Signal Processing"]
+    }
+    </script>
+
+    <style>
+        :root {
+            --primary: #1A3A52;
+            --accent: #FF6B35;
+            --bg-light: #F4F7F6;
+            --bg-header: #FFFFFF;
+            --text-dark: #2D3748;
+            --text-light: #718096;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+        }
+
+        /* Header and Nav */
+        header {
+            background: var(--bg-header);
+            padding: 1rem 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .site-title {
+            color: var(--primary);
+            font-size: 1.5rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        nav button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--text-dark);
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 0.5rem 0.8rem;
+            border-radius: 4px;
+            transition: color 0.2s ease;
+            font-family: inherit;
+        }
+
+        nav button:hover {
+            color: var(--accent);
+        }
+
+        nav button.active {
+            color: var(--accent);
+            border-bottom: 2px solid var(--accent);
+        }
+
+        /* Layout */
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 2rem 1.5rem;
+            background: #fff;
+            min-height: 80vh;
+            box-shadow: 0 0 20px rgba(0,0,0,0.05);
+            border-radius: 8px;
+        }
+
+        .section {
+            display: none;
+            animation: fadeIn 0.35s ease-in-out;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Profile */
+        .profile-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--bg-light);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            color: var(--primary);
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        h2.role-title {
+            color: var(--accent);
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+        }
+
+        h2.section-title {
+            color: var(--primary);
+            font-size: 1.8rem;
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+        }
+
+        /* Timeline */
+        .timeline-item {
+            margin-bottom: 2rem;
+            padding-left: 1rem;
+            border-left: 3px solid #E2E8F0;
+            transition: border-left-color 0.2s;
+        }
+
+        .timeline-item:hover {
+            border-left-color: var(--accent);
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            margin-bottom: 0.4rem;
+        }
+
+        .job-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .institution {
+            font-weight: 600;
+            color: var(--text-dark);
+            display: block;
+            margin-top: 0.2rem;
+        }
+
+        .date {
+            font-family: monospace;
+            color: var(--accent);
+            font-weight: 600;
+            background: #FFF5F2;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            white-space: nowrap;
+        }
+
+        .description {
+            color: var(--text-light);
+            margin-top: 0.4rem;
+            font-size: 0.95rem;
+        }
+
+        /* Publications */
+        .pub-list {
+            list-style: none;
+        }
+
+        .pub-list li {
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+            padding-left: 1rem;
+            border-left: 3px solid #E2E8F0;
+            transition: border-left-color 0.2s;
+        }
+
+        .pub-list li:hover {
+            border-left-color: var(--accent);
+        }
+
+        .pub-title {
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.3rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            color: var(--text-light);
+            font-size: 0.85rem;
+        }
+
+        /* Mobile */
+        @media (max-width: 600px) {
+            .header-content { flex-direction: column; gap: 0.8rem; }
+            nav ul { justify-content: center; }
+            .item-header { flex-direction: column; }
+            .date { margin-top: 0.4rem; }
+            h1 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-content">
+        <span class="site-title" onclick="showSection('about')">Praveen Ranganath</span>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><button id="nav-about"        onclick="showSection('about')">Profile</button></li>
+                <li><button id="nav-experience"   onclick="showSection('experience')">Experience</button></li>
+                <li><button id="nav-education"    onclick="showSection('education')">Education</button></li>
+                <li><button id="nav-publications" onclick="showSection('publications')">Publications</button></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section active">
+        <div class="profile-header">
+            <img src="pic.jpg" alt="Praveen Ranganath profile photo" class="profile-img" />
+            <h1>Praveen Ranganath</h1>
+            <h2 class="role-title">Co-Founder and Director | Consultant and Sr. Engineer | Data Scientist</h2>
+        </div>
+
+        <article>
+            <h2 class="section-title">About Me</h2>
+            <p><strong>Professional Summary:</strong> An experienced leader in Computational Technologies and Physics, currently serving as Co-Founder and Director at Chakradhari Computational Technologies and Senior Engineer at Turing. Extensive background spanning Data Analytics, Photonics, Radar Signal Processing, and Research Systems across institutions in the United States and India.</p>
+            <br />
+
+            <p><strong>A Personal Note:</strong>
+            Thank you for visiting my site. I am a physicist and engineer turned computational scientist, with a career spanning research labs, global enterprises, and entrepreneurship. My work sits at the intersection of applied physics, machine intelligence, and systems engineering — a combination shaped by years of hands-on research experience. My dual master's degrees built a foundation in rigorous scientific thinking that has guided everything I have built since. From the lab, I moved into industry and consulting, applying machine learning and analytics at scale. Other details can be found on the respective tabs. More details will be added often, so feel free to visit frequently.</p>
+        </article>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section id="experience" class="section">
+        <h2 class="section-title">Professional Experience</h2>
+
+        <article class="timeline-item">
+            <div class="item-header">
+                <div>
+                    <div class="job-title">Co-Founder and Director</div>
+                    <span class="institution">Chakradhari Computational Technologies Pvt. Ltd.</span>
+                </div>
+                <span class="date">Present</span>
+            </div>
+        </article>
+
+        <article class="timeline-item">
+            <div class="item-header">
+                <div>
+                    <div class="job-title">Sr. Engineer (Research Systems) </div>
+                    <span class="institution">Turing, CA, US (Remote)</span>
+                </div>
+                <time class="date">2022 - Present</time>
+            </div>
+        </article>
+
+        <article class="timeline-item">
+            <div class="item-header">
+                <div>
+                    <div class="job-title">Principal Consultant, Applied Data Science</div>
+                    <span class="institution">Talentsprint, Hyderabad, India (Remote)</span>
+                </div>
+                <time class="date">2021 - 2022</time>
+            </div>
+        </article>
+
+        <article class="timeline-item">
+            <div class="item-header">
+                <div>
+                    <div class="job-title">Lead Data Scientist, Data Analytics</div>
+                    <span class="institution">Sutherland Global, Bangalore, India</span>
+                </div>
+                <time class="date">2019 - 2021</time>
+            </div>
+        </article>
+
+        <article class="timeline-item">
+            <div class="item-header">
+                <div>
+                    <div class="job-title">Project Associate, Photonics Research Lab</div>
+                    <span class="institution">Indian Institute of Science (IISc), Bangalore</span>
+                </div>
+                <time class="date">2017 - 2019</time>
+            </div>
+            <p class="description">Center for Nanoscience and Engineering.</p>
+        </article>
+
+        <article class="timeline-item">
+            <div class="item-header">
+                <div>
+                    <div class="job-title">Sr. Research Fellow, Photonics Research Lab</div>
+                    <span class="institution">Indian Institute of Science (IISc), Bangalore</span>
+                </div>
+                <time class="date">2015 - 2017</time>
+            </div>
+            <p class="description">Center for Nanoscience and Engineering.</p>
+        </article>
+
+        <article class="timeline-item">
+            <div class="item-header">
+                <div>
+                    <div class="job-title">Graduate Teaching and Research Assistant</div>
+                    <span class="institution">Dept. of Physics, Alabama A&amp;M University, US</span>
+                </div>
+                <time class="date">2013 - 2014</time>
+            </div>
+        </article>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section id="education" class="section">
+        <h2 class="section-title">Education</h2>
+
+        <article class="timeline-item">
+            <div class="item-header">
+                <div>
+                    <div class="job-title">MS, Physics</div>
+                    <span class="institution">Alabama A&amp;M University, Normal, US</span>
+                </div>
+                <time class="date">2012 - 2014</time>
+            </div>
+            <p class="description">Major: Optics | Minor: Electromagnetics</p>
+        </article>
+
+        <article class="timeline-item">
+            <div class="item-header">
+                <div>
+                    <div class="job-title">MS, Electrical Engineering</div>
+                    <span class="institution">University of Alabama, Huntsville, US</span>
+                </div>
+                <time class="date">2010 - 2012</time>
+            </div>
+            <p class="description">Thesis: Radar Signal Processing | Advisor: Prof. John L. Stensby</p>
+        </article>
+
+        <article class="timeline-item">
+            <div class="item-header">
+                <div>
+                    <div class="job-title">BE, Electronics and Communication Engineering</div>
+                    <span class="institution">BMS Institute of Technology, India</span>
+                </div>
+                <time class="date">2006 - 2010</time>
+            </div>
+            <p class="description">Project: Autonomous Vehicular Safety Systems</p>
+        </article>
+    </section>
+
+    <!-- PUBLICATIONS SECTION -->
+    <section id="publications" class="section">
+        <h2 class="section-title">Selected Publications</h2>
+        <ul class="pub-list">
+            <li>
+                <div class="pub-title">Climate-Resilient Agriculture: Leveraging Language Models for Mitigation and Adaptation</div>
+                <p>S. Rao, P. Ranganath. In: Srivastava, R.K., Chakraborty, A. (eds) Mitigation and Adaptation Strategies Against Climate Change in Natural Systems. Environmental Earth Sciences. Springer, Cham. (2025)</p>
+            </li>
+            <li>
+                <div class="pub-title">High-efficiency vertical fibre-to-polymer waveguide coupling scheme for scalable polymer photonic circuits</div>
+                <p>A. Kumar, S. Nambiar, R. Kallega, P. Ranganath, et al. Optics Express, 29, 9699-9710 (2021).</p>
+            </li>
+            <li>
+                <div class="pub-title">Tuning and Actuation of Graphene Nanomechanical Resonator using Optical Gradient Force</div>
+                <p>A. Dash, C. Samanta, P. Ranganath, S.K. Selvaraja, and A.K. Naik. Journal of Optics, pp.065803 (May 2019).</p>
+            </li>
+            <li>
+                <div class="pub-title">High-efficiency SiN Grating Fiber-Chip Coupler with Bottom Reflector</div>
+                <p>Nambiar S., A. Kumar, Rakshitha K., P. Ranganath, S. K. Selvaraja. European Conference on Integrated Optics, Valencia (2018).</p>
+            </li>
+            <li>
+                <div class="pub-title">Ultra-high efficiency Non-uniform Dual-Band Grating Coupler in SiN Platform</div>
+                <p>Nambiar S., Hemalatha M., P. Ranganath, S. K. Selvaraja. European Conference on Integrated Optics, Valencia (2018).</p>
+            </li>
+            <li>
+                <div class="pub-title">Broadband transverse magnetic pass polarizer with low insertion loss based on silicon nitride waveguide</div>
+                <p>T.K. Sharma, P. Ranganath, S. Nambiar, S.K. Selvaraja. Optics Engineering, 57(3) 037104 (2018).</p>
+            </li>
+            <li>
+                <div class="pub-title">Waves generated in the plasma plume of helicon magnetic nozzle</div>
+                <p>N. Singh, S. Rao, and P. Ranganath. Physics of Plasmas, 20, 032111 (2013).</p>
+            </li>
+            <li>
+                <div class="pub-title">Implementation of Spectral Estimation Techniques for Range Doppler Mapping</div>
+                <p>P. Ranganath. Masters Thesis, Electrical Engineering, University of Alabama, Huntsville (2012).</p>
+            </li>
+        </ul>
+    </section>
+
+</main>
+
+<footer>
+    <p>Praveen Ranganath &mdash; Co-Founder and Director, Chakradhari Computational Technologies | Consulting Sr. Engineer, Turing</p>
+</footer>
+
+<script>
+    function showSection(sectionId) {
+        // Hide all sections
+        document.querySelectorAll('.section').forEach(function(s) {
+            s.classList.remove('active');
+        });
+
+        // Show the target section
+        var target = document.getElementById(sectionId);
+        if (target) {
+            target.classList.add('active');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Update nav button active states
+        document.querySelectorAll('nav button').forEach(function(btn) {
+            btn.classList.remove('active');
+        });
+        var activeBtn = document.getElementById('nav-' + sectionId);
+        if (activeBtn) {
+            activeBtn.classList.add('active');
+        }
+    }
+
+    // Set initial active state on page load
+    document.addEventListener('DOMContentLoaded', function() {
+        showSection('about');
+    });
+</script>
+
+</body>
+</html>
