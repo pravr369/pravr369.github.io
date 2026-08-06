@@ -247,6 +247,91 @@
             margin-bottom: 0.3rem;
         }
 
+        .pub-title a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .pub-title a:hover {
+            color: var(--accent);
+            text-decoration: underline;
+        }
+
+        /* Links & Contact Styles */
+        .external-links {
+            list-style: none;
+            margin-bottom: 2.5rem;
+        }
+
+        .external-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .external-links a {
+            color: var(--primary);
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 1.05rem;
+            transition: color 0.2s;
+        }
+
+        .external-links a:hover {
+            color: var(--accent);
+            text-decoration: underline;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            max-width: 600px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            padding: 0.8rem;
+            border: 1px solid #CBD5E0;
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: border-color 0.2s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        .submit-btn {
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 4px;
+            cursor: pointer;
+            width: fit-content;
+            transition: background 0.2s;
+        }
+
+        .submit-btn:hover {
+            background: var(--accent);
+        }
+
         /* Footer */
         footer {
             text-align: center;
@@ -276,6 +361,7 @@
                 <li><button id="nav-experience"   onclick="showSection('experience')">Experience</button></li>
                 <li><button id="nav-education"    onclick="showSection('education')">Education</button></li>
                 <li><button id="nav-publications" onclick="showSection('publications')">Publications</button></li>
+                <li><button id="nav-links"        onclick="showSection('links')">Links</button></li>
             </ul>
         </nav>
     </div>
@@ -421,38 +507,61 @@
         <h2 class="section-title">Selected Publications</h2>
         <ul class="pub-list">
             <li>
-                <div class="pub-title">Climate-Resilient Agriculture: Leveraging Language Models for Mitigation and Adaptation</div>
+                <div class="pub-title"><a href="https://link.springer.com/chapter/10.1007/978-3-031-75968-0_19" target="_blank" rel="noopener noreferrer">Climate-Resilient Agriculture: Leveraging Language Models for Mitigation and Adaptation</a></div>
                 <p>S. Rao, P. Ranganath. In: Srivastava, R.K., Chakraborty, A. (eds) Mitigation and Adaptation Strategies Against Climate Change in Natural Systems. Environmental Earth Sciences. Springer, Cham. (2025)</p>
             </li>
             <li>
-                <div class="pub-title">High-efficiency vertical fibre-to-polymer waveguide coupling scheme for scalable polymer photonic circuits</div>
+                <div class="pub-title"><a href="https://doi.org/10.1364/OE.412266" target="_blank" rel="noopener noreferrer">High-efficiency vertical fibre-to-polymer waveguide coupling scheme for scalable polymer photonic circuits</a></div>
                 <p>A. Kumar, S. Nambiar, R. Kallega, P. Ranganath, et al. Optics Express, 29, 9699-9710 (2021).</p>
             </li>
             <li>
-                <div class="pub-title">Tuning and Actuation of Graphene Nanomechanical Resonator using Optical Gradient Force</div>
+                <div class="pub-title"><a href="https://doi.org/10.1088/2040-8986/ab1bcb" target="_blank" rel="noopener noreferrer">Tuning and Actuation of Graphene Nanomechanical Resonator using Optical Gradient Force</a></div>
                 <p>A. Dash, C. Samanta, P. Ranganath, S.K. Selvaraja, and A.K. Naik. Journal of Optics, pp.065803 (May 2019).</p>
             </li>
             <li>
-                <div class="pub-title">High-efficiency SiN Grating Fiber-Chip Coupler with Bottom Reflector</div>
+                <div class="pub-title"><a href="https://www.ecio-conference.org/wp-content/uploads/2018/07/59-Th.2.B.5-59-Regular-Paper-High-efficiency-SiN-Grating-Fiber-Chip-Coupler-with-Bottom-Reflector.pdf" target="_blank" rel="noopener noreferrer">High-efficiency SiN Grating Fiber-Chip Coupler with Bottom Reflector</a></div>
                 <p>Nambiar S., A. Kumar, Rakshitha K., P. Ranganath, S. K. Selvaraja. European Conference on Integrated Optics, Valencia (2018).</p>
             </li>
             <li>
-                <div class="pub-title">Ultra-high efficiency Non-uniform Dual-Band Grating Coupler in SiN Platform</div>
+                <div class="pub-title"><a href="https://www.cense.iisc.ac.in/shankarks/publication/ultra-high-efficiency-non-uniform-dual-band-grating-coupler-sin-platform" target="_blank" rel="noopener noreferrer">Ultra-high efficiency Non-uniform Dual-Band Grating Coupler in SiN Platform</a></div>
                 <p>Nambiar S., Hemalatha M., P. Ranganath, S. K. Selvaraja. European Conference on Integrated Optics, Valencia (2018).</p>
             </li>
             <li>
-                <div class="pub-title">Broadband transverse magnetic pass polarizer with low insertion loss based on silicon nitride waveguide</div>
+                <div class="pub-title"><a href="https://doi.org/10.1117/1.OE.57.3.037104" target="_blank" rel="noopener noreferrer">Broadband transverse magnetic pass polarizer with low insertion loss based on silicon nitride waveguide</a></div>
                 <p>T.K. Sharma, P. Ranganath, S. Nambiar, S.K. Selvaraja. Optics Engineering, 57(3) 037104 (2018).</p>
             </li>
             <li>
-                <div class="pub-title">Waves generated in the plasma plume of helicon magnetic nozzle</div>
+                <div class="pub-title"><a href="https://doi.org/10.1063/1.4795734" target="_blank" rel="noopener noreferrer">Waves generated in the plasma plume of helicon magnetic nozzle</a></div>
                 <p>N. Singh, S. Rao, and P. Ranganath. Physics of Plasmas, 20, 032111 (2013).</p>
             </li>
             <li>
-                <div class="pub-title">Implementation of Spectral Estimation Techniques for Range Doppler Mapping</div>
+                <div class="pub-title"><a href="https://louis.uah.edu/uah-theses/566/" target="_blank" rel="noopener noreferrer">Implementation of Spectral Estimation Techniques for Range Doppler Mapping</a></div>
                 <p>P. Ranganath. Masters Thesis, Electrical Engineering, University of Alabama, Huntsville (2012).</p>
             </li>
         </ul>
+    </section>
+
+    <!-- LINKS SECTION -->
+    <section id="links" class="section">
+        <h2 class="section-title">Links &amp; Profiles</h2>
+        <ul class="external-links">
+            <li><a href="https://www.linkedin.com/in/praveenranganath" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="https://orcid.org/0000-0002-6959-5538" target="_blank" rel="noopener noreferrer">ORCID</a></li>
+            <li><a href="https://in.mathworks.com/matlabcentral/profile/authors/2686540?detail=fileexchange" target="_blank" rel="noopener noreferrer">MATLAB File Exchange</a></li>
+        </ul>
+
+        <h2 class="section-title">Contact Me</h2>
+        <form class="contact-form" action="#" method="POST">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="your.email@example.com" required />
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Your message..." required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
     </section>
 
 </main>
